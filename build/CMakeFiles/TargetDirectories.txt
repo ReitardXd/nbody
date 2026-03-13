@@ -1,0 +1,3 @@
+/home/reitard/Projects/nbody/nbody/build/CMakeFiles/nbody.dir
+/home/reitard/Projects/nbody/nbody/build/CMakeFiles/edit_cache.dir
+/home/reitard/Projects/nbody/nbody/build/CMakeFiles/rebuild_cache.dir
