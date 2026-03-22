@@ -23,8 +23,8 @@ add_library(imgui STATIC
 target_include_directories(imgui PUBLIC ${IMGUI_DIR} ${IMGUI_DIR}/backends)
 target_link_libraries(imgui glfw OpenGL::GL)
 
-add_executable(nbody src/main.cpp)
-
+file(GLOB_RECURSE SOURCES src/*.cpp)
+add_executable(nbody ${SOURCES})
 target_include_directories(nbody PRIVATE
     ${IMGUI_DIR}
     ${IMGUI_DIR}/backends
