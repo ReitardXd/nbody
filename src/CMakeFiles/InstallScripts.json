@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/reitard/Projects/nbody/nbody/src/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

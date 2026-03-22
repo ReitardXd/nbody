@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/nbody.dir/link.d CMakeFiles/nbody.dir/main.cpp.o -o nbody  /usr/lib/libglfw.so.3.4 /usr/lib/libGLEW.so /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libgomp.so /usr/lib/libpthread.a
