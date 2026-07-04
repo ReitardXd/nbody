@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/reitard/Projects/nbody/nbody/src/main.cpp" "CMakeFiles/nbody.dir/src/main.cpp.o" "gcc" "CMakeFiles/nbody.dir/src/main.cpp.o.d"
-  "/home/reitard/Projects/nbody/nbody/src/physics/Octree.cpp" "CMakeFiles/nbody.dir/src/physics/Octree.cpp.o" "gcc" "CMakeFiles/nbody.dir/src/physics/Octree.cpp.o.d"
-  "/home/reitard/Projects/nbody/nbody/src/render/Renderer.cpp" "CMakeFiles/nbody.dir/src/render/Renderer.cpp.o" "gcc" "CMakeFiles/nbody.dir/src/render/Renderer.cpp.o.d"
+  "/home/reitard/Projects/mp/nbody/nbody/src/main.cpp" "CMakeFiles/nbody.dir/src/main.cpp.o" "gcc" "CMakeFiles/nbody.dir/src/main.cpp.o.d"
+  "/home/reitard/Projects/mp/nbody/nbody/src/physics/Octree.cpp" "CMakeFiles/nbody.dir/src/physics/Octree.cpp.o" "gcc" "CMakeFiles/nbody.dir/src/physics/Octree.cpp.o.d"
+  "/home/reitard/Projects/mp/nbody/nbody/src/render/Renderer.cpp" "CMakeFiles/nbody.dir/src/render/Renderer.cpp.o" "gcc" "CMakeFiles/nbody.dir/src/render/Renderer.cpp.o.d"
   "" "nbody" "gcc" "CMakeFiles/nbody.dir/link.d"
   )
 

@@ -1,25 +1,21 @@
 #pragma once
 #include "Particle.h"
+#include "Octree.h"
 #include <vector>
 #include <cmath>
 #include <random>
 
 extern float timeScale;
 
+// O(N log N) Barnes-Hut — builds octree each frame, traverses per particle
 void computeForces(std::vector<Particle>& particles) {
+    Octree tree(particles);   // build once — O(N log N)
     int n = (int)particles.size();
-    #pragma omp parallel for schedule(static)
-    for (int i = 0; i < n; i++) {
-        Vec3 acc{};
-        for (int j = 0; j < n; j++) {
-            if (i==j) continue;
-            Vec3  d     = particles[j].pos - particles[i].pos;
-            float dist2 = d.norm2() + SOFTENING*SOFTENING;
-            float dist  = std::sqrt(dist2);
-            acc += d * (G * particles[j].mass / (dist2 * dist));
-        }
-        particles[i].acc = acc;
-    }
+
+    // tree reads are read-only after construction — safe to parallelise
+    #pragma omp parallel for schedule(dynamic, 16)
+    for (int i = 0; i < n; i++)
+        particles[i].acc = tree.computeAcc(particles[i], i);
 }
 
 void integrate(std::vector<Particle>& particles) {
